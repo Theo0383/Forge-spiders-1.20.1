@@ -16,7 +16,6 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
 import net.minecraft.world.entity.monster.Monster;
@@ -58,7 +57,7 @@ public class WanderingSpiderEntity extends Monster {
 
         this.targetSelector.addGoal(1, new AggroHurtByTargetGoal(this));
 
-        this.goalSelector.addGoal(2, new StalkingGoal(this));
+        this.goalSelector.addGoal(2, new StalkingGoal(navigation, this));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
