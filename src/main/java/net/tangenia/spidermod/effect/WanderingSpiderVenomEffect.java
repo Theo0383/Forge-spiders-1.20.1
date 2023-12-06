@@ -30,6 +30,9 @@ public class WanderingSpiderVenomEffect extends MobEffect {
 
         float hurt = pLivingEntity.getMaxHealth() - pLivingEntity.getHealth();
 
+        if(hurt >= 25)
+            hurt = 25;
+
         if(heartBeatPause == 0) {
             if(pLivingEntity instanceof Player)
             {
