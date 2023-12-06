@@ -200,7 +200,7 @@ public class WanderingSpiderEntity extends Monster {
     protected void playStepSound(BlockPos pPos, BlockState pBlock) {
         this.playSound(SoundEvents.SPIDER_STEP, 0.15F, 1.0F);
     }
-
+    //TEST
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();

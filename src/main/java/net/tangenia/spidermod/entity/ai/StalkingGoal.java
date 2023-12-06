@@ -55,7 +55,7 @@ public class StalkingGoal extends Goal {
     public void start() {
         super.start();
     }
-
+    //TEST
     @Override
     public void tick() {
         this.entity.getLookControl().setLookAt(target);

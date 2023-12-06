@@ -29,7 +29,7 @@ public class WanderingSpiderVenomEffect extends MobEffect {
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 
         float hurt = pLivingEntity.getMaxHealth() - pLivingEntity.getHealth();
-
+        //TEST
         if(hurt >= 25)
             hurt = 25;
 
