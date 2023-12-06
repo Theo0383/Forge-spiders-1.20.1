@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " F ",
+    " B ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "F": {
+      "item": "spidermod:funnel_web_fang"
+    }
+  },
+  "result": {
+    "item": "spidermod:funnel_web_fang_dagger"
+  }
+}

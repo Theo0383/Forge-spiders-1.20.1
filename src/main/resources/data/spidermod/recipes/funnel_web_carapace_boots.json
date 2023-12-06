@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "S S",
+    "C C"
+  ],
+  "key": {
+    "C": {
+      "item": "spidermod:funnel_web_carapace"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "spidermod:funnel_web_carapace_boots"
+  }
+}
