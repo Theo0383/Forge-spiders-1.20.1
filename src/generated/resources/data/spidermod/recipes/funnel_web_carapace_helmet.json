@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SES",
+    "C C",
+    "   "
+  ],
+  "key": {
+    "C": {
+      "item": "spidermod:funnel_web_carapace"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "E": {
+      "item": "minecraft:spider_eye"
+    }
+  },
+  "result": {
+    "item": "spidermod:funnel_web_carapace_helmet"
+  }
+}

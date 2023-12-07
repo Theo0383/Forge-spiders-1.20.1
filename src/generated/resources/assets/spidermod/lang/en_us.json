@@ -1,0 +1,37 @@
+{
+  "item.spidermod.funnel_web_spawn_egg": "Funnel web spawn egg",
+  "item.spidermod.black_widow_spawn_egg": "Black widow spawn egg",
+  "item.spidermod.wandering_spider_spawn_egg": "Wandering spider spawn egg",
+  "effect.spidermod.funnel_web_venom": "Funnel web venom",
+  "effect.spidermod.black_widow_venom": "Black Widow Venom",
+  "effect.spidermod.wandering_spider_venom": "Wandering spider venom",
+  "entity.spidermod.funnel_wep": "Funnel web spider",
+  "entity.spidermod.black_widow": "Black Widow",
+  "entity.spidermod.wandering_spider": "Wandering Spider",
+  "item.spidermod.funnel_web_leg": "Funnel web leg",
+  "item.spidermod.funnel_web_carapace": "Funnel web carapace",
+  "item.spidermod.funnel_web_fang": "Funnel web fang",
+  "item.spidermod.black_widow_fang": "Black widow fang",
+  "item.spidermod.funnel_web_carapace_helmet": "Funnel web carapace helmet",
+  "item.spidermod.funnel_web_carapace_chestplate": "Funnel web carapace chestplate",
+  "item.spidermod.funnel_web_carapace_leggings": "Funnel web carapace leggings",
+  "item.spidermod.funnel_web_carapace_boots": "Funnel web carapace boots",
+  "item.spidermod.funnel_web_fang_dagger": "Funnel web fang dagger",
+  "item.spidermod.black_widow_mace": "Black Widow Mace",
+  "effect.spidermod.funnel_web_affinity": "Funnel web Affinity",
+
+  "item.minecraft.potion.effect.funnel_web_affinity_potion": "Funnel web affinity potion",
+  "item.minecraft.splash_potion.effect.funnel_web_affinity_potion": "Funnel web affinity splash potion",
+  "item.minecraft.lingering_potion.effect.funnel_web_affinity_potion": "Lingering funnel web affinity potion",
+  "item.minecraft.tipped_arrow.effect.funnel_web_affinity_potion": "Tipped arrow of funnel web affinity",
+
+  "item.minecraft.potion.effect.black_widow_affinity_potion": "Black widow affinity potion",
+  "item.minecraft.splash_potion.effect.black_widow_affinity_potion": "Black widow affinity splash potion",
+  "item.minecraft.lingering_potion.effect.black_widow_affinity_potion": "Lingering Black widow affinity potion",
+  "item.minecraft.tipped_arrow.effect.black_widow_affinity_potion": "Tipped arrow of Black widow affinity",
+
+  "item.minecraft.potion.effect.black_widow_venom_potion": "Black widow venom potion",
+  "item.minecraft.splash_potion.effect.black_widow_venom_potion": "Black widow venom splash potion",
+  "item.minecraft.lingering_potion.effect.black_widow_venom_potion": "Lingering Black widow venom potion",
+  "item.minecraft.tipped_arrow.effect.black_widow_venom_potion": "Tipped arrow of Black widow venom"
+}

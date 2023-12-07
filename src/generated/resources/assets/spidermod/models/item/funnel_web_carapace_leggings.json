@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "spidermod:item/funnel_web_carapace_leggings"
+  }
+}

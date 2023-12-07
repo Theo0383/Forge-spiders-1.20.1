@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#forge:is_dry/overworld",
+  "spawners": {
+    "type": "spidermod:funnel_wep",
+    "maxCount": 2,
+    "minCount": 1,
+    "weight": 20
+  }
+}
