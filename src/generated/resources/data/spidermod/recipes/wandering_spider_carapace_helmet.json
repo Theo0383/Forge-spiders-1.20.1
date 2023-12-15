@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SCS",
+    "CHC",
+    "   "
+  ],
+  "key": {
+    "C": {
+      "item": "spidermod:wandering_spider_carapace"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "H": {
+      "item": "spidermod:wandering_spider_hair"
+    }
+  },
+  "result": {
+    "item": "spidermod:wandering_spider_carapace_helmet"
+  }
+}

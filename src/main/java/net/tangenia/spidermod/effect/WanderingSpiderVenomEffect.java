@@ -37,7 +37,9 @@ public class WanderingSpiderVenomEffect extends MobEffect {
             {
                 pLivingEntity.level().playSound((Player) pLivingEntity, new BlockPos(pLivingEntity.getBlockX(), pLivingEntity.getBlockY(), pLivingEntity.getBlockZ()), SoundEvents.WARDEN_HEARTBEAT, SoundSource.PLAYERS, 1f, 1f);
             }
-            pLivingEntity.hurt(pLivingEntity.damageSources().generic(), hurt);
+            if(hurt != 0) {
+                pLivingEntity.hurt(pLivingEntity.damageSources().generic(), hurt);
+            }
             heartBeatPause = 20;
         }
         else {

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "spidermod:item/wandering_spider_saber"
+  }
+}

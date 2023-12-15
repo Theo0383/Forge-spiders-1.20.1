@@ -30,7 +30,7 @@ public class FunnelWebVenomEffect extends MobEffect {
                 ((Player)pLivingEntity).getFoodData().addExhaustion(1f * (float)(pAmplifier + 1));
             }
         }
-        pLivingEntity.hurt(pLivingEntity.damageSources().drown(), 0.25F * (float)(pAmplifier + 1));
+        pLivingEntity.hurt(pLivingEntity.damageSources().drown(), 0.5F * (float)(pAmplifier + 1));
         super.applyEffectTick(pLivingEntity, pAmplifier);
     }
 

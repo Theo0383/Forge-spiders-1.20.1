@@ -5,6 +5,7 @@
   "effect.spidermod.funnel_web_venom": "Funnel web venom",
   "effect.spidermod.black_widow_venom": "Black Widow Venom",
   "effect.spidermod.wandering_spider_venom": "Wandering spider venom",
+  "effect.spidermod.wandering_spider_affinity": "Wandering spider affinity",
   "entity.spidermod.funnel_wep": "Funnel web spider",
   "entity.spidermod.black_widow": "Black Widow",
   "entity.spidermod.wandering_spider": "Wandering Spider",
@@ -12,13 +13,26 @@
   "item.spidermod.funnel_web_carapace": "Funnel web carapace",
   "item.spidermod.funnel_web_fang": "Funnel web fang",
   "item.spidermod.black_widow_fang": "Black widow fang",
+  "item.spidermod.wandering_spider_fang": "Wandering spider fang",
+  "item.spidermod.wandering_spider_hair": "Wandering spider hair",
+  "item.spidermod.wandering_spider_carapace": "Wandering spider carapace",
+  "item.spidermod.wandering_spider_leg": "Wandering spider leg",
+  "item.spidermod.wandering_spider_saber": "Wandering spider saber",
   "item.spidermod.funnel_web_carapace_helmet": "Funnel web carapace helmet",
   "item.spidermod.funnel_web_carapace_chestplate": "Funnel web carapace chestplate",
   "item.spidermod.funnel_web_carapace_leggings": "Funnel web carapace leggings",
   "item.spidermod.funnel_web_carapace_boots": "Funnel web carapace boots",
+
+  "item.spidermod.wandering_spider_carapace_helmet": "Wandering spider carapace helmet",
+  "item.spidermod.wandering_spider_carapace_chestplate": "Wandering spider carapace chestplate",
+  "item.spidermod.wandering_spider_carapace_leggings": "Wandering spider carapace leggings",
+  "item.spidermod.wandering_spider_carapace_boots": "Wandering spider carapace boots",
+
   "item.spidermod.funnel_web_fang_dagger": "Funnel web fang dagger",
   "item.spidermod.black_widow_mace": "Black Widow Mace",
+  "item.spidermod.locator": "Locator",
   "effect.spidermod.funnel_web_affinity": "Funnel web Affinity",
+  "effect.spidermod.black_widow_affinity": "black widow affinity",
 
   "item.minecraft.potion.effect.funnel_web_affinity_potion": "Funnel web affinity potion",
   "item.minecraft.splash_potion.effect.funnel_web_affinity_potion": "Funnel web affinity splash potion",
@@ -33,5 +47,10 @@
   "item.minecraft.potion.effect.black_widow_venom_potion": "Black widow venom potion",
   "item.minecraft.splash_potion.effect.black_widow_venom_potion": "Black widow venom splash potion",
   "item.minecraft.lingering_potion.effect.black_widow_venom_potion": "Lingering Black widow venom potion",
-  "item.minecraft.tipped_arrow.effect.black_widow_venom_potion": "Tipped arrow of Black widow venom"
+  "item.minecraft.tipped_arrow.effect.black_widow_venom_potion": "Tipped arrow of Black widow venom",
+
+  "item.minecraft.potion.effect.wandering_spider_affinity_potion": "Wandering spider affinity potion",
+  "item.minecraft.splash_potion.effect.wandering_spider_affinity_potion": "Wandering spider affinity splash potion",
+  "item.minecraft.lingering_potion.effect.wandering_spider_affinity_potion": "Lingering Wandering spider affinity potion",
+  "item.minecraft.tipped_arrow.effect.wandering_spider_affinity_potion": "Tipped arrow of Wandering spider affinity"
 }

@@ -24,9 +24,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FUNNEL_WEB_CARAPACE_LEGGINGS);
         simpleItem(ModItems.FUNNEL_WEB_CARAPACE_BOOTS);
 
+        simpleItem(ModItems.WANDERING_SPIDER_CARAPACE_HELMET);
+        simpleItem(ModItems.WANDERING_SPIDER_CARAPACE_CHESTPLATE);
+        simpleItem(ModItems.WANDERING_SPIDER_CARAPACE_LEGGINGS);
+        simpleItem(ModItems.WANDERING_SPIDER_CARAPACE_BOOTS);
+
         handheldItem(ModItems.FUNNEL_WEB_FANG_DAGGER);
 
         handheldItem(ModItems.BLACK_WIDOW_MACE);
+
+        handheldItem(ModItems.WANDERING_SPIDER_SABER);
 
         withExistingParent(ModItems.FUNNEL_WEB_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 

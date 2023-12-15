@@ -22,7 +22,15 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266652_.put(ArmorItem.Type.LEGGINGS, 4);
         p_266652_.put(ArmorItem.Type.CHESTPLATE, 5);
         p_266652_.put(ArmorItem.Type.HELMET, 2);
-    }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> Ingredient.of(ModItems.FUNNEL_WEB_CARAPACE.get()));
+    }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> Ingredient.of(ModItems.FUNNEL_WEB_CARAPACE.get())),
+    WANDERING_SPIDER_CARAPACE("wandering_spider_carapace", 20, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+        p_266652_.put(ArmorItem.Type.BOOTS, 2);
+        p_266652_.put(ArmorItem.Type.LEGGINGS, 4);
+        p_266652_.put(ArmorItem.Type.CHESTPLATE, 5);
+        p_266652_.put(ArmorItem.Type.HELMET, 2);
+    }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> Ingredient.of(ModItems.WANDERING_SPIDER_CARAPACE.get()));
+
+
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {
         p_266653_.put(ArmorItem.Type.BOOTS, 13);

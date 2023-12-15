@@ -18,7 +18,9 @@ import java.util.Map;
 public class ModItemArmor extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.FUNNEL_WEB_CARAPACE, new MobEffectInstance(ModEffects.FUNNEL_WEB_AFFINITY_EFFECT.get(), 40, 0, false, false, false)).build();
+                    .put(ModArmorMaterials.FUNNEL_WEB_CARAPACE, new MobEffectInstance(ModEffects.FUNNEL_WEB_AFFINITY_EFFECT.get(), 40, 0, false, false, false))
+                    .put(ModArmorMaterials.WANDERING_SPIDER_CARAPACE, new MobEffectInstance(ModEffects.WANDERING_SPIDER_AFFINITY_EFFECT.get(), 40, 0, false, false, false))
+                    .build();
 
     public ModItemArmor(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);

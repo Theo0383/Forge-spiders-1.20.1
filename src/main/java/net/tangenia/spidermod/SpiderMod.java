@@ -63,6 +63,7 @@ public class SpiderMod
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.FUNNEL_WEB_FANG.get(), ModPotions.FUNNEL_WEB_AFFINITY_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.BLACK_WIDOW_FANG.get(), ModPotions.BLACK_WIDOW_AFFINITY_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.POISON, ModItems.BLACK_WIDOW_FANG.get(), ModPotions.BLACK_WIDOW_VENOM_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.WANDERING_SPIDER_FANG.get(), ModPotions.WANDERING_SPIDER_AFFINITY_POTION.get()));
         });
     }
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

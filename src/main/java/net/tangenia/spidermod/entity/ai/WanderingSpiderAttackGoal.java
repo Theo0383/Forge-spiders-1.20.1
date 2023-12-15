@@ -20,7 +20,7 @@ public class WanderingSpiderAttackGoal extends MeleeAttackGoal {
 
 
     protected double getAttackReachSqr(LivingEntity pAttackTarget) {
-        return (double)(20.0F + pAttackTarget.getBbWidth());
+        return (double)(25.0F + pAttackTarget.getBbWidth());
     }
     private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy, double pDistTtoEnemySqr) {
         return pDistTtoEnemySqr <= this.getAttackReachSqr(pEnemy);

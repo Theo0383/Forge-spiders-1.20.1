@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SCS",
+    "C C",
+    "C C"
+  ],
+  "key": {
+    "C": {
+      "item": "spidermod:wandering_spider_carapace"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "spidermod:wandering_spider_carapace_leggings"
+  }
+}

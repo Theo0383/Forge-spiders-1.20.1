@@ -69,7 +69,7 @@ public class WanderingSpiderEntity extends Monster {
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMobAttributes().add(Attributes.MAX_HEALTH, 88D)
                 .add(Attributes.ATTACK_DAMAGE, 8f)
-                .add(Attributes.FOLLOW_RANGE, 24D)
+                .add(Attributes.FOLLOW_RANGE, 38D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.MOVEMENT_SPEED, 0.20D)
                 .add(Attributes.ATTACK_KNOCKBACK, 1f);

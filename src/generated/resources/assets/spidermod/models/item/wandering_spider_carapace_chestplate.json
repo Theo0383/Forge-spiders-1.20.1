@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "spidermod:item/wandering_spider_carapace_chestplate"
+  }
+}

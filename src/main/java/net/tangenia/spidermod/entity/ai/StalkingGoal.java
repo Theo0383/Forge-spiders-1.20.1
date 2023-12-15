@@ -1,17 +1,20 @@
 package net.tangenia.spidermod.entity.ai;
 
+import net.minecraft.world.entity.EntitySelector;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.tangenia.spidermod.effect.ModEffects;
+import net.tangenia.spidermod.effect.WanderingSpiderAffinityEffect;
 import net.tangenia.spidermod.entity.custom.WanderingSpiderEntity;
 
 public class StalkingGoal extends Goal {
     private final PathNavigation navigation;
     private Player target;
     private int timeToRecalcPath;
-    private int timeToStrike = 100;
+    private int timeToStrike = 200;
 
     private final WanderingSpiderEntity entity;
     public StalkingGoal(PathNavigation navigation, WanderingSpiderEntity pMob) {
@@ -19,28 +22,31 @@ public class StalkingGoal extends Goal {
         entity = pMob;
     }
 
-    private boolean isPlayNearBy(double range) {
+    private Player noAffinityNearBy(double range) {
         Level level = this.entity.level();
-        Player nearestPlayer = level.getNearestPlayer(this.entity, 200);
-        if(nearestPlayer != null) {
-            if(nearestPlayer.distanceTo(this.entity) <= range) {
-                return true;
+
+        for (Player player : level.players()) {
+            if (EntitySelector.NO_CREATIVE_OR_SPECTATOR.test(player) && EntitySelector.LIVING_ENTITY_STILL_ALIVE.test(player)) {
+                if(!player.hasEffect(ModEffects.WANDERING_SPIDER_AFFINITY_EFFECT.get())) {
+                    double d0 = player.distanceToSqr(this.entity.getX(), this.entity.getY(), this.entity.getZ());
+                    if (range < 0.0D || d0 < range * range) {
+                        return player;
+                    }
+                }
             }
-            return false;
         }
-        return false;
+        return null;
     }
 
     @Override
     public boolean canUse() {
-        if(!isPlayNearBy(30)) {
+        if(noAffinityNearBy(80) == null) {
             return false;
         }
         if(this.entity.isAggro()) {
             return false;
         }
-        Level level = this.entity.level();
-        target = level.getNearestPlayer(this.entity, 40);
+        target = noAffinityNearBy(80);
         return true;
     }
 
@@ -51,6 +57,18 @@ public class StalkingGoal extends Goal {
             return false;
         }
         if(target.isSpectator()) {
+            stop();
+            return false;
+        }
+        if(target.isCreative()) {
+            stop();
+            return false;
+        }
+        if(target.hasEffect(ModEffects.WANDERING_SPIDER_AFFINITY_EFFECT.get())) {
+            stop();
+            return false;
+        }
+        if(target.getHealth() <= 0.0) {
             stop();
             return false;
         }
@@ -77,9 +95,10 @@ public class StalkingGoal extends Goal {
             }
         }
         else {
-            if(!(this.timeToStrike >= 100)) {
+            if(!(this.timeToStrike >= 200)) {
                 this.timeToStrike++;
         }}
+        this.entity.setPersistenceRequired();
     }
 
     @Override
