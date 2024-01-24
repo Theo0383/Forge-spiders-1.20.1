@@ -31,6 +31,10 @@ public class ModPotions {
             POTIONS.register("wandering_spider_affinity_potion",
                     () -> new Potion(new MobEffectInstance(ModEffects.WANDERING_SPIDER_AFFINITY_EFFECT.get(), 2400, 0)));
 
+    public static final RegistryObject<Potion> WOLF_SPIDER_AFFINITY_POTION =
+            POTIONS.register("wolf_spider_affinity_potion",
+                    () -> new Potion(new MobEffectInstance(ModEffects.WOLF_SPIDER_AFFINITY_EFFECT.get(), 2400, 0)));
+
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }

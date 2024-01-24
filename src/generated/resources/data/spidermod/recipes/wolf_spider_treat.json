@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SFS",
+    "SMS",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "M": {
+      "item": "spidermod:wolf_spider_meat"
+    },
+    "F": {
+      "item": "spidermod:wolf_spider_fang"
+    }
+  },
+  "result": {
+    "item": "spidermod:wolf_spider_treat"
+  }
+}

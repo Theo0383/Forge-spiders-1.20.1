@@ -40,6 +40,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.BLACK_WIDOW_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         withExistingParent(ModItems.WANDERING_SPIDER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+        withExistingParent(ModItems.WOLF_SPIDER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

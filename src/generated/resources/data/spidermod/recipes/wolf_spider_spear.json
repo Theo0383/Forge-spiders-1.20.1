@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " F ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "F": {
+      "item": "spidermod:wolf_spider_fang"
+    }
+  },
+  "result": {
+    "item": "spidermod:wolf_spider_spear"
+  }
+}

@@ -15,19 +15,23 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.tangenia.spidermod.SpiderMod;
 import net.tangenia.spidermod.effect.ModEffects;
+import net.tangenia.spidermod.effect.WolfSpiderAffinityEffect;
 import net.tangenia.spidermod.entity.ModEntities;
 import net.tangenia.spidermod.entity.custom.FunnelWepEntity;
+import net.tangenia.spidermod.entity.custom.WolfSpiderEntity;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
 import static net.minecraft.world.damagesource.DamageTypes.IN_WALL;
+import static net.minecraft.world.damagesource.DamageTypes.MOB_ATTACK;
 
 @Mod.EventBusSubscriber(modid = SpiderMod.MODID)
 public class ModEvents {
@@ -38,6 +42,21 @@ public class ModEvents {
             if (event.getSource().is(IN_WALL)) {
                 event.setAmount(0.0F);
                 event.setCanceled(true);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPetSpiderAttack(LivingDamageEvent event) {
+        if(event.getSource().getEntity() instanceof WolfSpiderEntity) {
+            WolfSpiderEntity pet = (WolfSpiderEntity) event.getSource().getEntity();
+            if(pet.isTame()) {
+                if(pet.getOwner() != null) {
+                    if(pet.getOwner().hasEffect(ModEffects.WOLF_SPIDER_AFFINITY_EFFECT.get())) {
+                        float newDamage = event.getAmount() + 6.0f;
+                        event.setAmount(newDamage);
+                    }
+                }
             }
         }
     }

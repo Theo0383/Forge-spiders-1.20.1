@@ -3,6 +3,7 @@ package net.tangenia.spidermod;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,9 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tangenia.spidermod.effect.ModEffects;
 import net.tangenia.spidermod.entity.ModEntities;
-import net.tangenia.spidermod.entity.client.BlackWidowRenderer;
-import net.tangenia.spidermod.entity.client.FunnelWepRenderer;
-import net.tangenia.spidermod.entity.client.WanderingSpiderRenderer;
+import net.tangenia.spidermod.entity.client.*;
 import net.tangenia.spidermod.entity.custom.FunnelWepEntity;
 import net.tangenia.spidermod.item.ModCreativeModeTabs;
 import net.tangenia.spidermod.item.ModItems;
@@ -64,6 +63,7 @@ public class SpiderMod
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.BLACK_WIDOW_FANG.get(), ModPotions.BLACK_WIDOW_AFFINITY_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.POISON, ModItems.BLACK_WIDOW_FANG.get(), ModPotions.BLACK_WIDOW_VENOM_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.WANDERING_SPIDER_FANG.get(), ModPotions.WANDERING_SPIDER_AFFINITY_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.WOLF_SPIDER_TREAT.get(), ModPotions.WOLF_SPIDER_AFFINITY_POTION.get()));
         });
     }
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -76,6 +76,8 @@ public class SpiderMod
                 EntityRenderers.register(ModEntities.FUNNELWEP.get(), FunnelWepRenderer::new);
                 EntityRenderers.register(ModEntities.BLACKWIDOW.get(), BlackWidowRenderer::new);
                 EntityRenderers.register(ModEntities.WANDERING_SPIDER.get(), WanderingSpiderRenderer::new);
+                EntityRenderers.register(ModEntities.WOLF_SPIDER.get(), WolfSpiderRenderer::new);
+                EntityRenderers.register(ModEntities.THROWN_SPEAR.get(), SpearProjectileRenderer::new);
             });
         }
     }

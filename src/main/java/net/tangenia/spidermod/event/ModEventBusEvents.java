@@ -12,12 +12,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.tangenia.spidermod.SpiderMod;
 import net.tangenia.spidermod.entity.ModEntities;
-import net.tangenia.spidermod.entity.client.BlackWidowModel;
-import net.tangenia.spidermod.entity.client.FunnelWepModel;
-import net.tangenia.spidermod.entity.client.WanderingSpiderModel;
+import net.tangenia.spidermod.entity.client.*;
 import net.tangenia.spidermod.entity.custom.BlackWidowEntity;
 import net.tangenia.spidermod.entity.custom.FunnelWepEntity;
 import net.tangenia.spidermod.entity.custom.WanderingSpiderEntity;
+import net.tangenia.spidermod.entity.custom.WolfSpiderEntity;
 import net.tangenia.spidermod.entity.layers.ModModelLayers;
 
 @Mod.EventBusSubscriber(modid = SpiderMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -28,6 +27,8 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(ModModelLayers.FUNNELWEP_LAYER, FunnelWepModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.BLACK_WIDOW_LAYER, BlackWidowModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.WANDERING_SPIDER_LAYER, WanderingSpiderModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.WOLF_SPIDER_LAYER, WolfSpiderModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.SPEAR_ENTITY_LAYER, SpearProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -36,6 +37,7 @@ public class ModEventBusEvents {
         event.put(ModEntities.FUNNELWEP.get(), FunnelWepEntity.createAttributes().build());
         event.put(ModEntities.BLACKWIDOW.get(), BlackWidowEntity.createAttributes().build());
         event.put(ModEntities.WANDERING_SPIDER.get(), WanderingSpiderEntity.createAttributes().build());
+        event.put(ModEntities.WOLF_SPIDER.get(), WolfSpiderEntity.createAttributes().build());
     }
 
     @SubscribeEvent

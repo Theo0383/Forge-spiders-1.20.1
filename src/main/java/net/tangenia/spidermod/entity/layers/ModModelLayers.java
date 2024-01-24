@@ -13,4 +13,10 @@ public class ModModelLayers {
 
     public static final ModelLayerLocation WANDERING_SPIDER_LAYER = new ModelLayerLocation(
             new ResourceLocation(SpiderMod.MODID, "wandering_spider_layer"), "wandering_spider_layer");
+
+    public static final ModelLayerLocation WOLF_SPIDER_LAYER = new ModelLayerLocation(
+            new ResourceLocation(SpiderMod.MODID, "wolf_spider_layer"), "wolf_spider_layers");
+
+    public static final ModelLayerLocation SPEAR_ENTITY_LAYER = new ModelLayerLocation(
+            new ResourceLocation(SpiderMod.MODID, "spear_entity_layer"), "spear_entity_layer");
 }

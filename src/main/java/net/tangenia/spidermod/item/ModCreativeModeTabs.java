@@ -42,6 +42,11 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.WANDERING_SPIDER_CARAPACE_CHESTPLATE.get());
                 pOutput.accept(ModItems.WANDERING_SPIDER_CARAPACE_LEGGINGS.get());
                 pOutput.accept(ModItems.WANDERING_SPIDER_CARAPACE_BOOTS.get());
+                pOutput.accept(ModItems.WOLF_SPIDER_SPAWN_EGG.get());
+                pOutput.accept(ModItems.WOLF_SPIDER_MEAT.get());
+                pOutput.accept(ModItems.WOLF_SPIDER_TREAT.get());
+                pOutput.accept(ModItems.SPEAR.get());
+                pOutput.accept(ModItems.WOLF_SPIDER_FANG.get());
             }).build());
     public static void register(IEventBus eventBus)
     {

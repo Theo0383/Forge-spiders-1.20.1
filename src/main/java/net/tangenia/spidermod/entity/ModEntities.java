@@ -7,9 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tangenia.spidermod.SpiderMod;
-import net.tangenia.spidermod.entity.custom.BlackWidowEntity;
-import net.tangenia.spidermod.entity.custom.FunnelWepEntity;
-import net.tangenia.spidermod.entity.custom.WanderingSpiderEntity;
+import net.tangenia.spidermod.entity.custom.*;
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SpiderMod.MODID);
@@ -25,6 +23,13 @@ public class ModEntities {
     public static final RegistryObject<EntityType<WanderingSpiderEntity>> WANDERING_SPIDER =
             ENTITY_TYPES.register("wandering_spider", () -> EntityType.Builder.of(WanderingSpiderEntity::new, MobCategory.MONSTER)
                     .sized(2.5f, 1f).build("wandering_spider"));
+
+    public static final RegistryObject<EntityType<WolfSpiderEntity>> WOLF_SPIDER =
+            ENTITY_TYPES.register("wolf_spider", () -> EntityType.Builder.of(WolfSpiderEntity::new, MobCategory.CREATURE)
+                    .sized(2.0f, 1.1f).build("wolf_spider"));
+
+    public static final RegistryObject<EntityType<SpearProjectileEntity>> THROWN_SPEAR =
+            ENTITY_TYPES.register("thrown_spear", () -> EntityType.Builder.<SpearProjectileEntity>of(SpearProjectileEntity::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("thrown_spear"));
     public static void register(IEventBus eventBus)
     {
         ENTITY_TYPES.register(eventBus);

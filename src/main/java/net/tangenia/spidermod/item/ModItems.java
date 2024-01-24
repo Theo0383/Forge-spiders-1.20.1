@@ -66,6 +66,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.WANDERING_SPIDER, 0x360b04, 0xff0800,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> WOLF_SPIDER_SPAWN_EGG = ITEMS.register("wolf_spider_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.WOLF_SPIDER, 0x4a2408, 0x8c5f3e,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> WANDERING_SPIDER_HAIR = ITEMS.register("wandering_spider_hair",
             () -> new Item(new Item.Properties()));
 
@@ -78,8 +82,20 @@ public class ModItems {
     public static final RegistryObject<Item> WANDERING_SPIDER_CARAPACE = ITEMS.register("wandering_spider_carapace",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> SPEAR = ITEMS.register("wolf_spider_spear",
+            () -> new WolfSpiderSpearItem(ModToolTiers.FANG, 4, -2f, (new Item.Properties()).durability(250)));
+
     public static final RegistryObject<Item> WANDERING_SPIDER_LEG = ITEMS.register("wandering_spider_leg",
             () -> new Item(new Item.Properties().food(ModFoodProperties.WANDERING_SPIDER_LEG)));
+
+    public static final RegistryObject<Item> WOLF_SPIDER_MEAT = ITEMS.register("wolf_spider_meat",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.WOLF_SPIDER_MEAT)));
+
+    public static final RegistryObject<Item> WOLF_SPIDER_TREAT = ITEMS.register("wolf_spider_treat",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.WOLF_SPIDER_TREAT)));
+
+    public static final RegistryObject<Item> WOLF_SPIDER_FANG = ITEMS.register("wolf_spider_fang",
+            () -> new WolfSpiderFangItem(new Item.Properties()));
 
     public static void register(IEventBus eventbus)
     {

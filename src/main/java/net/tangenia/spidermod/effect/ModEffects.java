@@ -32,6 +32,12 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> WANDERING_SPIDER_AFFINITY_EFFECT = MOB_EFFECTS.register("wandering_spider_affinity",
             () -> new WanderingSpiderAffinityEffect(MobEffectCategory.BENEFICIAL, 0x6e0000));
 
+    public static final RegistryObject<MobEffect> WOLF_SPIDER_EFFECT = MOB_EFFECTS.register("wolf_spider_venom",
+            () -> new WolfSpiderVenomEffect(MobEffectCategory.HARMFUL, 0x8a24c9));
+
+    public static final RegistryObject<MobEffect> WOLF_SPIDER_AFFINITY_EFFECT = MOB_EFFECTS.register("wolf_spider_affinity",
+            () -> new WolfSpiderAffinityEffect(MobEffectCategory.BENEFICIAL, 0x8a24c9));
+
     public static void register(IEventBus eventBus)
     {
         MOB_EFFECTS.register(eventBus);
